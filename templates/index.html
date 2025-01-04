@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blokadni Turnir Strategija</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Blokadni Turnir Strategija</h1>
+        <div class="github-link">
+            <a href="https://github.com/njaric03/PrisonersDillemaTournament" target="_blank">
+                Posetite GitHub repozitorijum za više informacija
+            </a>
+        </div>
+        
+        {% if message %}
+        <div class="message">
+            {{ message }}
+        </div>
+        {% endif %}
+
+        <form method="POST" action="/submit" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="team_name">Ime Tima:</label>
+                <input type="text" id="team_name" name="team_name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="code">Python Kod:</label>
+                <div class="code-input-container">
+                    <textarea id="code" name="code" placeholder="Ovde unesite vaš kod..."></textarea>
+                    <div class="file-upload">
+                        <label for="code_file">Ili otpremite fajl:</label>
+                        <input type="file" id="code_file" name="code_file" accept=".py">
+                    </div>
+                </div>
+            </div>
+            
+            <button type="submit">Pošalji</button>
+        </form>
+    </div>
+</body>
+</html>

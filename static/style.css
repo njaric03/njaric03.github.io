@@ -1,0 +1,132 @@
+body {
+    background-color: #1E2337;
+    color: #E0E7FF;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 20px;
+    font-size: 11px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: #E0E7FF;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #E0E7FF;
+    font-family: 'Segoe UI Light', sans-serif;
+    font-size: 24px;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: #2A3F54;
+    border: 1px solid #E0E7FF;
+    color: #E0E7FF;
+    border-radius: 4px;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 11px;
+}
+
+textarea {
+    height: 300px;
+    font-family: monospace;
+    flex: 1;
+}
+
+button {
+    background-color: #2A3F54;
+    color: #E0E7FF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: hand2;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 12px;
+}
+
+button:hover {
+    background-color: #3C5876;
+}
+
+.message {
+    background-color: #2A3F54;
+    padding: 15px;
+    border-radius: 4px;
+    margin-top: 20px;
+    border: 1px solid #E0E7FF;
+}
+
+.code-input-container {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.file-upload {
+    width: 200px;
+    padding: 10px;
+    background-color: #2A3F54;
+    border: 1px solid #E0E7FF;
+    border-radius: 4px;
+}
+
+.file-upload label {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+input[type="file"] {
+    width: 100%;
+    padding: 5px;
+    color: #E0E7FF;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+    background-color: #3C5876;
+    color: #E0E7FF;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 12px;
+}
+
+.github-link {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.github-link a {
+    color: #E0E7FF;
+    text-decoration: none;
+    padding: 8px 16px;
+    background-color: #2A3F54;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.github-link a:hover {
+    background-color: #3C5876;
+}
