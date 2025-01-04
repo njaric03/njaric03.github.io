@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blokadni Turnir Strategija</title>
-    <link rel="stylesheet" href="{{ url_for('static', path='/style.css') }}">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/submit.js"></script>
 </head>
 <body>
     <div class="container">
@@ -15,13 +16,9 @@
             </a>
         </div>
         
-        {% if message %}
-        <div class="message">
-            {{ message }}
-        </div>
-        {% endif %}
+        <div id="message" class="message" style="display: none;"></div>
 
-        <form method="POST" action="/submit" enctype="multipart/form-data">
+        <form id="submissionForm" onsubmit="handleSubmit(event)">
             <div class="form-group">
                 <label for="team_name">Ime Tima:</label>
                 <input type="text" id="team_name" name="team_name" required>
@@ -33,7 +30,7 @@
                     <textarea id="code" name="code" placeholder="Ovde unesite vaš kod..."></textarea>
                     <div class="file-upload">
                         <label for="code_file">Ili otpremite fajl:</label>
-                        <input type="file" id="code_file" name="code_file" accept=".py">
+                        <input type="file" id="code_file" name="code_file" accept=".py" onchange="handleFileSelect(event)">
                     </div>
                 </div>
             </div>
