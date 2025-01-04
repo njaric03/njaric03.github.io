@@ -1,3 +1,177 @@
-/* ...existing code... */
+:root {
+    --bg: #1E2337;
+    --button: #2A3F54;
+    --button-hover: #3C5876;
+    --text: #E0E7FF;
+    --accent: #4A90E2;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 40px 20px;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: rgba(42, 63, 84, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    color: var(--accent);
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+}
+
+.github-link {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.github-link a {
+    color: var(--text);
+    text-decoration: none;
+    padding: 12px 24px;
+    background-color: var(--button);
+    border-radius: 6px;
+    font-size: 12px;
+    font-family: 'Segoe UI', sans-serif;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+}
+
+.github-link a:hover {
+    background-color: var(--button-hover);
+    border-color: var(--accent);
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    margin-bottom: 12px;
+    color: var(--text);
+    font-family: 'Segoe UI Light', sans-serif;
+    font-size: 24px;
+}
+
+.code-input-container {
+    display: grid;
+    grid-template-columns: 1fr 250px;
+    gap: 20px;
+    align-items: start;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--button);
+    border: 1px solid var(--text);
+    color: var(--text);
+    border-radius: 6px;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 11px;
+    transition: border-color 0.2s ease;
+}
+
+input[type="text"]:focus, textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+textarea {
+    height: 400px;
+    font-family: 'Consolas', monospace;
+    resize: vertical;
+}
+
+.file-upload {
+    background-color: var(--button);
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid var(--text);
+}
+
+.file-upload label {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: var(--accent);
+}
+
+input[type="file"] {
+    width: 100%;
+    padding: 5px;
+    color: var(--text);
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+    background-color: var(--button);
+    color: var(--text);
+    padding: 10px 20px;
+    border: 1px solid var(--text);
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 12px;
+    transition: all 0.2s ease;
+}
+
+input[type="file"]::-webkit-file-upload-button:hover {
+    background-color: var(--button-hover);
+    border-color: var(--accent);
+}
+
+button {
+    background-color: var(--button);
+    color: var(--text);
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 12px;
+    transition: all 0.2s ease;
+    min-width: 120px;
+}
+
+button:hover {
+    background-color: var(--button-hover);
+    border-color: var(--accent);
+}
+
+.message {
+    background-color: var(--button);
+    padding: 15px 20px;
+    border-radius: 6px;
+    margin-bottom: 30px;
+    border: 1px solid var(--text);
+    font-size: 12px;
+    display: none;
+}
+
+.message.error {
+    border-color: #ff4444;
+}
+
+.message.success {
+    border-color: #00C851;
+}
 
 /* Update paths if there are any url() references */
